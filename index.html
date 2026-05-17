@@ -69,11 +69,18 @@ nav{
 }
 
 /* Logo */
-.logo{
-    font-size:32px;
-    font-weight:700;
-    color:#00ffff;
-    text-shadow:0 0 10px #00ffff,0 0 20px #00ffff,0 0 40px #00ffff;
+.logo img{
+    width:180px;
+    height:auto;
+    object-fit:contain;
+    filter:
+    drop-shadow(0 0 10px #00ffff)
+    drop-shadow(0 0 20px #7b2cff);
+    transition:0.4s ease;
+}
+
+.logo img:hover{
+    transform:scale(1.05);
 }
 
 /* Nav Links */
@@ -361,7 +368,9 @@ nav{
 <div class="bg-glow2"></div>
 
 <nav>
-    <div class="logo">imMehboOb</div>
+   <div class="logo">
+    <img src="images/logo.png" alt="Logo">
+</div>
 
     <div>
         <a href="#">Home</a>
