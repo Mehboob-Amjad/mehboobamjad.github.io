@@ -9,13 +9,11 @@
 <title>Mehboob Amjad | Unity Game Developer</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
 /* Reset */
-
 *{
     margin:0;
     padding:0;
@@ -24,7 +22,6 @@
 }
 
 /* Body */
-
 body{
     font-family:'Poppins',sans-serif;
     background:#050816;
@@ -33,7 +30,6 @@ body{
 }
 
 /* Background Glow */
-
 .bg-glow{
     position:fixed;
     width:500px;
@@ -59,7 +55,6 @@ body{
 }
 
 /* Navbar */
-
 nav{
     width:100%;
     padding:20px 8%;
@@ -73,34 +68,35 @@ nav{
     z-index:100;
 }
 
+/* Logo */
 .logo{
     font-size:32px;
     font-weight:700;
     color:#00ffff;
+    text-shadow:0 0 10px #00ffff,0 0 20px #00ffff,0 0 40px #00ffff;
+}
 
-    text-shadow:
-    0 0 10px #00ffff,
-    0 0 20px #00ffff,
-    0 0 40px #00ffff;
+/* Nav Links */
+nav div:last-child{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+    justify-content:center;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin-left:25px;
     font-weight:500;
     transition:0.3s;
 }
 
 nav a:hover{
     color:#00ffff;
-
-    text-shadow:
-    0 0 10px #00ffff;
+    text-shadow:0 0 10px #00ffff;
 }
 
 /* Hero */
-
 .hero{
     min-height:100vh;
     display:flex;
@@ -114,8 +110,6 @@ nav a:hover{
     text-align:center;
 }
 
-/* Hero Top */
-
 .hero-top{
     display:flex;
     align-items:center;
@@ -125,46 +119,25 @@ nav a:hover{
     margin-bottom:30px;
 }
 
-/* Profile */
-
 .hero-profile{
     width:280px;
     height:280px;
     border-radius:50%;
     object-fit:cover;
-
     border:4px solid #00ffff;
-
-    box-shadow:
-    0 0 15px #00ffff,
-    0 0 30px #7b2cff,
-    0 0 60px #ff00ff;
-
+    box-shadow:0 0 15px #00ffff,0 0 30px #7b2cff,0 0 60px #ff00ff;
     transition:0.5s ease;
 }
 
 .hero-profile:hover{
     transform:scale(1.08) rotate(3deg);
-
-    box-shadow:
-    0 0 25px #00ffff,
-    0 0 50px #7b2cff,
-    0 0 100px #ff00ff;
 }
 
 /* Hero Text */
-
 .hero h1{
     font-size:75px;
     margin-bottom:10px;
-
-    background:linear-gradient(
-    to right,
-    #00ffff,
-    #7b2cff,
-    #ff00ff
-    );
-
+    background:linear-gradient(to right,#00ffff,#7b2cff,#ff00ff);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 }
@@ -172,69 +145,54 @@ nav a:hover{
 .hero h2{
     font-size:30px;
     color:#d0d0d0;
-    margin-bottom:10px;
 }
 
-/* Description Text */
+/* Typing text */
+.typing-text{
+    font-size:30px;
+    color:#d0d0d0;
+}
 
+.cursor{
+    color:#00ffff;
+    animation:blink 0.7s infinite;
+}
+
+@keyframes blink{
+    50%{ opacity:0; }
+}
+
+/* Description */
 .typing{
-
     font-size:20px;
-
     color:#b8b8b8;
-
-    margin:auto;
-
-    margin-bottom:55px;
-
     max-width:850px;
-
+    margin:0 auto 55px;
     line-height:1.8;
 }
 
 /* Buttons */
-
 .btn,
 .project-btn{
-
     display:inline-block;
-
     padding:15px 35px;
-
     border-radius:50px;
-
     text-decoration:none;
-
     color:white;
-
     font-weight:600;
-
     margin:10px;
-
     background:#10182f;
-
     border:2px solid #00ffff;
-
     transition:0.4s ease;
-
-    box-shadow:
-    0 0 10px #00ffff50;
 }
 
 .btn:hover,
 .project-btn:hover{
-
     transform:translateY(-8px) scale(1.08);
-
-    box-shadow:
-    0 0 10px #ff00ff,
-    0 0 20px #00ffff,
-    0 0 40px #00ff99,
-    0 0 80px #7b2cff;
+    box-shadow:0 0 10px #ff00ff,0 0 20px #00ffff,0 0 40px #00ff99;
 }
 
 /* Projects */
-
 .projects{
     padding:100px 8%;
 }
@@ -243,9 +201,7 @@ nav a:hover{
     text-align:center;
     font-size:50px;
     margin-bottom:60px;
-
     background:linear-gradient(to right,#00ffff,#ff00ff);
-
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 }
@@ -256,70 +212,39 @@ nav a:hover{
     gap:35px;
 }
 
-/* Cards */
-
 .card{
-
     background:rgba(255,255,255,0.05);
-
     border:1px solid rgba(255,255,255,0.1);
-
     border-radius:25px;
-
     padding:25px;
-
     transition:0.5s;
-
     backdrop-filter:blur(10px);
-
-    transform-style:preserve-3d;
 }
 
 .card:hover{
-
-    transform:
-    rotateY(5deg)
-    rotateX(5deg)
-    translateY(-10px);
-
-    box-shadow:
-    0 20px 40px rgba(0,191,255,0.25);
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,191,255,0.25);
 }
-
-/* Project Images */
 
 .card img{
-
     width:100%;
-
     height:220px;
-
     object-fit:cover;
-
     border-radius:20px;
-
     margin-bottom:20px;
-
-    transition:0.5s;
-}
-
-.card img:hover{
-    transform:scale(1.03);
 }
 
 .card h3{
-    margin-bottom:15px;
     font-size:28px;
+    margin-bottom:15px;
 }
 
 .card p{
     color:#cfcfcf;
-    margin-bottom:20px;
     line-height:1.7;
 }
 
 /* Skills */
-
 .skills{
     padding:100px 8%;
     text-align:center;
@@ -342,17 +267,46 @@ nav a:hover{
 }
 
 .skill:hover{
-
     transform:scale(1.1);
-
     background:#00bfff;
+}
 
-    box-shadow:
-    0 0 20px #00bfff;
+/* CONTACT (SEPARATE SECTION) */
+.contact{
+    padding:100px 8%;
+    text-align:center;
+}
+
+.contact-box{
+    display:flex;
+    justify-content:center;
+    margin-top:40px;
+}
+
+.contact-card{
+    padding:20px 30px;
+    border-radius:15px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(0,255,255,0.3);
+    backdrop-filter:blur(10px);
+    font-size:18px;
+    color:#cfcfcf;
+    transition:0.4s;
+}
+
+.contact-card:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 25px #00ffff50;
+}
+
+.contact-box{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
 }
 
 /* Footer */
-
 footer{
     margin-top:60px;
     padding:20px;
@@ -366,9 +320,13 @@ marquee{
     font-weight:600;
 }
 
-/* Mobile */
-
+/* MOBILE */
 @media(max-width:768px){
+
+nav{
+    flex-direction:column;
+    gap:15px;
+}
 
 .hero h1{
     font-size:45px;
@@ -378,21 +336,17 @@ marquee{
     font-size:22px;
 }
 
-.typing{
-    font-size:16px !important;
-    white-space:normal;
-    border:none;
-    animation:none;
-    width:100%;
+.hero-profile{
+    width:180px;
+    height:180px;
 }
 
 .section-title{
     font-size:38px;
 }
 
-.hero-profile{
-    width:180px;
-    height:180px;
+.typing{
+    font-size:16px;
 }
 
 }
@@ -406,25 +360,16 @@ marquee{
 <div class="bg-glow"></div>
 <div class="bg-glow2"></div>
 
-<!-- Navbar -->
-
 <nav>
+    <div class="logo">imMehboOb</div>
 
-<div class="logo">
-imMehboOb
-</div>
-
-<div>
-
-<a href="#">Home</a>
-<a href="#projects">Projects</a>
-<a href="#skills">Skills</a>
-
-</div>
-
+    <div>
+        <a href="#">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </div>
 </nav>
-
-<!-- Hero -->
 
 <section class="hero">
 
@@ -435,127 +380,61 @@ imMehboOb
 <img src="profile.jpeg.jpg" class="hero-profile">
 
 <div>
-
 <h1>Mehboob Amjad</h1>
-
-<h2>Unity Game Developer</h2>
-
+<h2 class="typing-text">
+  <span id="typedText"></span><span class="cursor">|</span>
+</h2>
 </div>
 
 </div>
 
 <p class="typing">
-
 Professional Unity Game Developer specialized in gameplay programming, mobile optimization and interactive game systems.
-
 </p>
 
-<a href="https://linkedin.com" target="_blank" class="btn">
-LinkedIn
-</a>
-
-<a href="https://github.com" target="_blank" class="btn">
-GitHub
-</a>
+<a href="https://linkedin.com" target="_blank" class="btn">LinkedIn</a>
+<a href="https://github.com" target="_blank" class="btn">GitHub</a>
 
 </div>
 
-
-
 </section>
-
-<!-- Projects -->
 
 <section class="projects" id="projects">
 
-<h2 class="section-title">
-My Projects
-</h2>
+<h2 class="section-title">My Projects</h2>
 
 <div class="project-grid">
 
-<!-- Truck Simulator -->
-
 <div class="card">
-
 <img src="images/trucksimulator.jpg">
-
 <h3>Truck Simulator</h3>
-
-<p>
-
-Advanced truck simulator with realistic trailer systems,
-AI traffic, physics and immersive gameplay.
-
-</p>
-
-<a href="https://play.google.com/store/apps/details?id=com.pits.highway.truck.racing&hl=en" target="_blank" class="project-btn">
-
-View Project
-
-</a>
-
+<p>Advanced truck simulator with realistic trailer systems, AI traffic and physics.</p>
+<a href="#" class="project-btn">View Project</a>
 </div>
 
-<!-- Crazy Airport Chaos -->
-
 <div class="card">
-
 <img src="images/crazyairport.jpg">
-
 <h3>Crazy Airport Chaos</h3>
-
-<p>
-
-Airport action game with challenging gameplay,
-physics interactions and fun mechanics.
-
-</p>
-
-<a href="https://play.google.com/store/apps/details?id=com.nexthope.crazy.airport.slap.fighting.game&hl=en" target="_blank" class="project-btn">
-
-View Project
-
-</a>
-
+<p>Fun airport chaos gameplay with physics interactions.</p>
+<a href="#" class="project-btn">View Project</a>
 </div>
 
-<!-- Thief Vs Cops -->
-
 <div class="card">
-
 <img src="images/thiefvscops.jpg">
-
 <h3>Thief Vs Cops</h3>
-
-<p>
-
-Thief vs Cops running game, like user is a thief and it goal to escape from the Police!
-
-</p>
-
-<a href="https://play.google.com/store/apps/details?id=com.pixelguru.thief.cops.police.chase.game&hl=en" target="_blank" class="project-btn">
-
-View Project
-
-</a>
-
+<p>Runner game where player escapes from police.</p>
+<a href="#" class="project-btn">View Project</a>
 </div>
 
 </div>
 
 </section>
 
-<!-- Skills -->
-
 <section class="skills" id="skills">
 
-<h2 class="section-title">
-Skills
-</h2>
+<h2 class="section-title">Skills</h2>
 
 <div class="skill-box">
-
 <div class="skill">Unity</div>
 <div class="skill">C#</div>
 <div class="skill">Game Physics</div>
@@ -564,23 +443,83 @@ Skills
 <div class="skill">Vehicle Systems</div>
 <div class="skill">Animation</div>
 <div class="skill">UI Design</div>
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="contact-box">
+
+<div class="contact-card">
+📞 Phone No: 03084647080
+</div>
+
+<div class="contact-card">
+📧 Email: mehboobamjad13@gmail.com
+</div>
 
 </div>
 
 </section>
 
-<!-- Footer -->
-
 <footer>
-
 <marquee>
-
-© 2026 Mehboob Amjad | Unity Game Developer | FPS Games | Truck Simulators | Mobile Games | AI Systems | Gameplay Programming
-
+© 2026 Mehboob Amjad | Unity Game Developer | FPS Games | Truck Simulators | Mobile Games
 </marquee>
-
 </footer>
 
-</body>
+<script>
+const texts = [
+    "Unity Game Developer",
+    "C# Gameplay Programmer",
+    "Mobile Game Specialist",
+    "3D Game Systems Developer"
+];
 
+let textIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+const speed = 100;
+const eraseSpeed = 60;
+const pauseTime = 1500;
+
+const target = document.getElementById("typedText");
+
+function typeLoop(){
+
+    const currentText = texts[textIndex];
+
+    if(!isDeleting){
+
+        target.innerHTML = currentText.substring(0, charIndex + 1);
+        charIndex++;
+
+        if(charIndex === currentText.length){
+            isDeleting = true;
+            setTimeout(typeLoop, pauseTime);
+            return;
+        }
+
+    }else{
+
+        target.innerHTML = currentText.substring(0, charIndex - 1);
+        charIndex--;
+
+        if(charIndex === 0){
+            isDeleting = false;
+            textIndex = (textIndex + 1) % texts.length;
+        }
+    }
+
+    setTimeout(typeLoop, isDeleting ? eraseSpeed : speed);
+}
+
+window.addEventListener("load", typeLoop);
+</script>
+
+</body>
 </html>
