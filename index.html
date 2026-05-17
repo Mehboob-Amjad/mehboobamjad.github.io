@@ -178,55 +178,37 @@ nav a:hover{
 /* Typing Animation */
 
 .typing{
-
     overflow:hidden;
     white-space:nowrap;
-
     border-right:3px solid #00ffff;
-
     width:0;
-
-    display:inline-block;
-
     animation:
-    typing 6s steps(90,end) infinite alternate,
+    typing 4s steps(30,end) forwards,
     blink 0.8s infinite;
 
     font-size:20px;
     color:#b8b8b8;
-
     margin:auto;
     margin-bottom:35px;
-
     max-width:850px;
 }
 
 @keyframes typing{
-
-    0%{
+    from{
         width:0;
+        font-size:16px;
     }
 
-    40%{
+    to{
         width:100%;
+        font-size:22px;
     }
-
-    60%{
-        width:100%;
-    }
-
-    100%{
-        width:0;
-    }
-
 }
 
 @keyframes blink{
-
     50%{
         border-color:transparent;
     }
-
 }
 
 /* Buttons */
@@ -469,7 +451,7 @@ imMehboOb
 
 <div class="hero-top">
 
-<img src="profile.jpg" class="hero-profile">
+<img src="profile.jpeg.jpg" class="hero-profile">
 
 <div>
 
