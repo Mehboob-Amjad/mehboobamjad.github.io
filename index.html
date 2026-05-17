@@ -57,7 +57,8 @@ body{
 /* Navbar */
 nav{
     width:100%;
-    padding:20px 8%;
+    height:80px;
+    padding:0 8%;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -68,12 +69,16 @@ nav{
     z-index:100;
 }
 
-/* Logo */
 .logo{
-    font-size:32px;
-    font-weight:700;
-    color:#00ffff;
-    text-shadow:0 0 10px #00ffff,0 0 20px #00ffff,0 0 40px #00ffff;
+    height:80px;
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    width:200px;
+    height:auto;
+    object-fit:contain;
 }
 
 /* Nav Links */
@@ -324,8 +329,28 @@ marquee{
 @media(max-width:768px){
 
 nav{
+    height:auto;
+    padding:15px 5%;
     flex-direction:column;
-    gap:15px;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    width:100px;
+}
+
+nav div:last-child{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    font-size:15px;
 }
 
 .hero h1{
@@ -336,6 +361,10 @@ nav{
     font-size:22px;
 }
 
+.typing{
+    font-size:16px;
+}
+
 .hero-profile{
     width:180px;
     height:180px;
@@ -343,10 +372,6 @@ nav{
 
 .section-title{
     font-size:38px;
-}
-
-.typing{
-    font-size:16px;
 }
 
 }
@@ -361,7 +386,9 @@ nav{
 <div class="bg-glow2"></div>
 
 <nav>
-    <div class="logo">imMehboOb</div>
+    <div class="logo">
+    <img src="images/logo.png" alt="Logo">
+</div>
 
     <div>
         <a href="#">Home</a>
